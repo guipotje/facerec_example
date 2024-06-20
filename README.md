@@ -2,7 +2,7 @@
 This project showcases a facial recognition system utilizing the DeepFace library coupled with YOLOv8 for real-time capability. It includes a passive and active anti-spoofing detection mechanism, making it more robust to spoof attempts.
 
 # Usage
-To get started, you need to populate the database with some images. Below is the structure of the project, including the database (`db`):
+To get started, you need to populate the database with some images. Below is the structure of the database (`db`):
 
 ```bash
 data/
@@ -24,7 +24,7 @@ data/
     └── yolov8n-face.pt
 ```
 
-No need to download the model weights separately; just populate the db with images of individuals. We adhere to the LFW (Labeled Faces in the Wild) format for image organization.
+No need to download the model weights, they will be downloaded automatically when running the web-app; just populate the db with images of individuals. We adhere to the LFW (Labeled Faces in the Wild) format for image organization.
 
 We use Docker to simplify the setup. Just run the following command to get started:
 ```bash
