@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: .  # Set the build context to the current directory
+      dockerfile: Dockerfile  # Specify the Dockerfile to use
+    volumes:
+      - ./src:/src  # Mount the local src directory to /src in the container
+      - ./data/db:/db
+      - ./data:/root/.deepface:rw
+    devices:
+      - "/dev/video0:/dev/video0"
+
+    working_dir: /usr/src/app  # Set the working directory inside the container
+    command: python3 /src/app.py  # Command to start an interactive bash terminal
+    ports:
+      - "8090:8080"
